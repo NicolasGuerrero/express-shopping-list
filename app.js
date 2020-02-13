@@ -3,6 +3,7 @@ const items = require('./fakeDb');
 const itemRoutes = require("./routes");
 const ExpressError = require("./expressError");
 
+
 const app = express();
 
 app.use(express.json());
@@ -23,6 +24,5 @@ app.use(function(err, req, res, next) {
   });
 });
 
-app.listen(3000, function() {
-  console.log("Server listening on port 3000");
-});
+
+module.exports = app;

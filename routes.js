@@ -11,7 +11,7 @@ router.get("/", function(req, res) {
 router.post("/", function(req, res) {
   
   items.push(req.body)
-  return res.json({ "added": req.body })
+  return res.status(201).json({ "added": req.body })
 });
 
 router.get("/:name", function(req, res, next){
